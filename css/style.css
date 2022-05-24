@@ -118,4 +118,44 @@ header .navbar ul li a:hover {
     font-size: 2.5rem;
     padding: 1rem 1.5rem;
     z-index: 1000;
+    display: none;
+}
+
+
+/* media queries jeb stila nosacījumi priekš datoriem,  mob. un planšetēm */
+@media (max-width: 1200px) {
+    
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 991px) {
+    
+    header {
+        left: -120%;
+    }
+
+    #menu {
+        display: block;
+    }
+
+/* Stils pēc JS funkcijas toggle izpildes (headers parādās lapas kreisajā pusē) */
+    header.toggle {
+        left: 0%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    html {
+        font-size: 50%;
+    }
+}
+
+@media (max-width: 400px) {
+    /* Šajā izmērā izvēlne atversies pa visu ekrāna platumu */
+    header {
+        width: 100vw;
+    }
 }
