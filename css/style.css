@@ -12,7 +12,8 @@
     margin: 0; padding: 0; /* noņem sarakstam aplīšus */
     box-sizing: border-box;
     text-decoration: none;
-    outline: none; border: none;
+    outline: none; 
+    border: none;
     text-transform: capitalize;
     transition: all .2s linear;
 }
@@ -60,6 +61,7 @@ section {
     margin-top: 1rem;
     font-size: 2rem;
     border-radius: 5rem;
+    text-transform: none;
 }
 
 .btn i {
@@ -88,12 +90,20 @@ section {
     text-align: center;
     margin: 0 6rem;
     font-size: 4rem;
-    padding: 1rem;
+    padding: 2rem;
     color: #fff;
 }
 
 .headingtwo span {
     color: var(--yellow);
+}
+
+.top {
+    position: fixed;
+    bottom: 7.5rem;
+    right: 2rem;
+    z-index: 100;
+    display: none;
 }
 
 header {
@@ -202,6 +212,10 @@ header .navbar ul li a:hover {
 }
 
 /* about section start */
+.about {
+    min-height: 500px; /* set default height */
+}
+
 .about .row {
     display: flex;
     align-items: center;
@@ -231,13 +245,14 @@ header .navbar ul li a:hover {
 
 /* education & experience section start */
 .edu-exp .row {
-    display: flex;
+    display: grid;
     flex-wrap: wrap;
     gap: 1.5rem;
 }
 
 .edu-exp .row .box-container {
-    flex: 1 1 40rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
 }
 
 .edu-exp .row .box-container .title {
@@ -249,7 +264,8 @@ header .navbar ul li a:hover {
 .edu-exp .row .box-container .box {
     text-align: left;
     margin: 1.5rem 0;
-    background-color: #eee;
+    background-color: #333;
+    color: #eee;
     padding: 2rem;
 }
 
@@ -289,6 +305,79 @@ header .navbar ul li a:hover {
     padding: 0;
 }
 
+/* portfolio section start */
+.portfolio .box-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+
+.portfolio .box-container .box {
+    height: 32rem;
+    width: 44rem;
+    border-radius: 1rem;
+    margin: 2rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.portfolio .box-container .box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.portfolio .box-container .box:hover img {
+    transform: scale(1.2);
+}
+
+/* contact section start */
+.contact {
+    min-height: 500px; /* set default height */
+}
+
+.contact .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact .row .contact {
+    flex: 1 1 30rem;
+    padding: 4rem;
+    padding-bottom: 0;
+}
+
+.contact .row .content {
+    flex: 1 1 30rem;
+    padding: 4rem;
+    padding-bottom: 0;
+}
+
+.contact .row .content .title {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 3rem;
+    padding-bottom: 2rem;
+}
+
+.contact .row .content .info h3 {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color: #eee;
+    padding: 1rem 0;
+    font-weight: normal;
+    text-transform: none;
+}
+
+.contact .row .content .info h3 i {
+    padding-right: 1rem;
+    color: var(--yellow);
+}
 
 /* media queries jeb stila nosacījumi priekš datoriem,  mob. un planšetēm */
 @media (max-width: 1200px) {
@@ -337,5 +426,10 @@ header .navbar ul li a:hover {
 
     .heading {
         margin: 0 3rem;
+    }
+
+    .portfolio .box-container .box {
+        width: 100%;
+
     }
 }
